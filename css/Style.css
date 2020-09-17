@@ -54,3 +54,45 @@ a {
 a:hover, a.on {
   color: #cc3333;
   background-color: #red;}
+  .grid-container {
+  border: 3px dashed purple;
+  padding: 1em;
+/*-- enables grid layout--*/
+  display: grid;
+  grid-gap: 1em 2em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item {
+  border: 10px solid white;
+  padding: .5em;
+  width: 400px;
+  background-color:no;
+}
+
+.grid-container {
+  grid-template-areas:
+                      "feat1 feat2 feat3"
+                      "left middle right";
+}
+.two {
+  grid-area: feat1;
+}
+.three {
+  grid-area: feat2;
+}
+.four {
+  grid-area: feat3;
+}
+.five {
+  grid-area: left;
+  height: 500px;
+}
+.six {
+  grid-area: right;
+  height: 500px;
+}
+.seven {
+  grid-area: middle;
+  height: 500px;
+}
