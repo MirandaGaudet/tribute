@@ -1,36 +1,45 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   font-size: 90%;
-  font-family:"Courier New",Courier,monospace;
+  font-family:font-family: 'Libre Baskerville', serif;
+font-family: 'Source Sans Pro', sans-serif;
 letter-spacing: 0.15em;
 background-color: #F1F7ED;}
+
 #content {overflow: auto;}
+
 #nav, #feature, #footer {
-  margin 1%;}
-  .Column1, .Column2, .Column3 {
-    width: 31.3%;
-    float: left;
-    margin 1%;}
+  margin 1%;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
     .Column3{ margin-right: 0%;}
 
 #page {
-  max-width: 1000px;
-  min-width: 1000px;
-  margin: 10px auto 10;
+  margin: 10px auto;
   padding:none;
   border:none;
   background-color: none;}
   #logo{
-    width: 200px;
-    margin:10px auto 25px auto;}
+    width: 450px;
+    margin:10px auto 0px auto;
+  }
     ul {
-      width: 2000px;
-      padding: 25px;
+      padding: 20px;
       margin: 50px auto  50px auto;
       border-top: 2px solid #F1F7ED;
-      border-bottom: 1px solid #F1F7ED;
-      text-align: 1000px;}
+      border-bottom: 2px solid #F1F7ED;
+    }
       li {
-        display: inline;
+        display:inline;
 padding: 0.5em;}
 #nav, #footer {
   background-color: #747274;
@@ -43,7 +52,6 @@ padding: 0.5em;}
         p {
 color: #F1F7ED;
           text-align: center;
-          width:550px;
           margin: 20px auto 20px auto;
           font-weight: normal;}
 a {
@@ -55,7 +63,7 @@ a:hover, a.on {
   color: #cc3333;
   background-color: #red;}
   .grid-container {
-  border: 3px dashed purple;
+  border: 3px dashed none;
   padding: 1em;
 /*-- enables grid layout--*/
   display: grid;
@@ -64,7 +72,7 @@ a:hover, a.on {
 }
 
 .grid-item {
-  border: 10px solid white;
+  border: 2px solid white;
   padding: .5em;
   width: 400px;
   background-color:no;
@@ -77,22 +85,45 @@ a:hover, a.on {
 }
 .two {
   grid-area: feat1;
+  background-color: black;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 25px;
 }
 .three {
   grid-area: feat2;
+  background-color: black;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 25px;
 }
 .four {
   grid-area: feat3;
+  background-color: black;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 25px;
 }
 .five {
   grid-area: left;
   height: 500px;
+  background-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+
 }
 .six {
   grid-area: right;
   height: 500px;
+  background-color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
 }
 .seven {
   grid-area: middle;
   height: 500px;
+  background-color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+.foot-container{
+  font-family: 'Libre Baskerville', serif;
+font-family: 'Source Sans Pro', sans-serif;
 }
