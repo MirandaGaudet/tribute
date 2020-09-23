@@ -1,129 +1,163 @@
 *, *:before, *:after {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 body {
-  font-size: 90%;
-  font-family:font-family: 'Libre Baskerville', serif;
+font-size: 90%;
+font-family:font-family: 'Libre Baskerville', serif;
 font-family: 'Source Sans Pro', sans-serif;
 letter-spacing: 0.15em;
 background-color: #F1F7ED;}
 
+.background {
+  background-image: url('../img/lightening 2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 #content {overflow: auto;}
 
 #nav, #feature, #footer {
-  margin 1%;
+margin 1%;
 }
 .center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 100%;
 }
 
-    .Column3{ margin-right: 0%;}
+.Column3{ margin-right: 0%;}
 
 #page {
-  margin: 10px auto;
-  padding:none;
-  border:none;
-  background-color: none;}
-  #logo{
-    width: 450px;
-    margin:10px auto 0px auto;
-  }
-    ul {
-      padding: 20px;
-      margin: 50px auto  50px auto;
-      border-top: 2px solid #F1F7ED;
-      border-bottom: 2px solid #F1F7ED;
-    }
-      li {
-        display:inline;
+margin: 10px auto;
+padding:none;
+border:none;
+background-color: none;}
+#logo{
+width: 450px;
+margin:10px auto 0px auto;
+}
+
+li {
+display:inline;
 padding: 0.5em;}
-#nav, #footer {
+
+#navigation {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 50px auto  50px auto;
+  border-top: 2px solid #F1F7ED;
+  border-bottom: 2px solid #F1F7ED;
+  font-size: 18px;
+  background-color: rgba(0,0,0,0.9);
+}
+#footer {
   background-color: #747274;
-  padding: 0.5em 0;}
-  #feature {
-    height: 10em;
-    margin-bottom: 1em;
-    background-color: #747274;
-  }
-        p {
+  padding: 0.5em 0;
+}
+
+#feature {
+height: 10em;
+margin-bottom: 1em;
+background-color: #747274;
+}
+p {
 color: #F1F7ED;
-          text-align: center;
-          margin: 20px auto 20px auto;
-          font-weight: normal;}
+text-align: center;
+margin: 20px auto 20px auto;
+font-weight: normal;}
+
 a {
   color: #F1F7ED;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 6px 18px 5px 18px;}
-a:hover, a.on {
-  color: #cc3333;
-  background-color: #red;}
-  .grid-container {
-  border: 3px dashed none;
-  padding: 1em;
-/*-- enables grid layout--*/
-  display: grid;
-  grid-gap: 1em 2em;
-  grid-template-columns: repeat(3, 1fr);
+  padding: 6px 18px 5px 18px;
+  transition: all .3s ease-in-out;
 }
 
-.grid-item {
-  border: 2px solid white;
-  padding: .5em;
-  width: 400px;
-  background-color:no;
+a:hover, a.on {
+color: #4881D5;
 }
 
 .grid-container {
+  border: 3px dashed none;
+  padding: 1em;
+  /*-- enables grid layout--*/
+  display: grid;
+  grid-gap: 1em 2em;
+  justify-items: center;
   grid-template-areas:
-                      "feat1 feat2 feat3"
-                      "left middle right";
+            "feat1 feat2 feat3"
+            "left middle right";
 }
+@media screen and (max-width: 1280px) {
+  .grid-container {
+    grid-template-areas:
+                    "feat1"
+                    "left"
+                    "feat2"
+                    "middle"
+                    "feat3"
+                    "right";
+                  }
+  #navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.grid-item {
+border: 2px solid white;
+padding: .5em;
+width: 400px;
+background-color:no;
+}
+
 .two {
-  grid-area: feat1;
-  background-color: black;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 25px;
+grid-area: feat1;
+background-color: rgba(0,0,0,0.9);
+font-family: 'Fjalla One', sans-serif;
+font-size: 25px;
 }
 .three {
-  grid-area: feat2;
-  background-color: black;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 25px;
+grid-area: feat2;
+background-color: rgba(0,0,0,0.9);
+font-family: 'Fjalla One', sans-serif;
+font-size: 25px;
 }
 .four {
-  grid-area: feat3;
-  background-color: black;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 25px;
+grid-area: feat3;
+background-color: rgba(0,0,0,0.9);
+font-family: 'Fjalla One', sans-serif;
+font-size: 25px;
 }
 .five {
-  grid-area: left;
-  height: 500px;
-  background-color: black;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
+grid-area: left;
+height: 500px;
+background-color: rgba(0,0,0,0.9);
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 20px;
 
 }
 .six {
-  grid-area: right;
-  height: 500px;
-  background-color: black;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
+grid-area: right;
+height: 500px;
+background-color: rgba(0,0,0,0.9);
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 20px;
 }
 .seven {
-  grid-area: middle;
-  height: 500px;
-  background-color: black;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
+grid-area: middle;
+height: 500px;
+background-color: rgba(0,0,0,0.9);
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 20px;
 }
 .foot-container{
-  font-family: 'Libre Baskerville', serif;
+font-family: 'Libre Baskerville', serif;
 font-family: 'Source Sans Pro', sans-serif;
 }
